@@ -1,0 +1,31 @@
+<!--pages/register/register.wxml-->
+<!-- <text>pages/register/register.wxml</text> -->
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="page__hd">
+		<view class="page__title">{{ClassInChinese}}全体学生列表</view>
+		<view class="page__desc">点击按钮或学生列表即可跳转</view>
+	</view>
+
+	<view class="weui-footer">
+		<view class="weui-footer__links">
+			<a href="javascript:" class="weui-footer__link" bindtap="navigateToroutePlan">目前距离莞城实验小学{{distance}}米</a>
+		</view>
+	</view>
+
+	<view class="page__bd">
+		<view class="button-sp-area">
+			<button bindtap="bindToapply" class="weui-btn weui-btn_primary">接送申请或更改</button>
+		</view>
+	</view>
+
+	<view class="page__bd">
+		<view class="weui-cells__title">学号、姓名和接送地点</view>
+		<scroll-view scroll-y="true" style="height: 650rpx;" class="weui-cells weui-cells_after-title fadeIn">
+			<view wx:for="{{Students}}" wx:key="index" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="toapply" data-item="{{item}}">
+				<view class="weui-cell__bd"><text decode="true">&nbsp;&nbsp;{{item.ID}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.Name}}</text></view>
+				<view class="weui-cell__ft weui-cell__ft_in-access">{{item.Pick_Location?item.Pick_Location: '未登记'}}</view>
+			</view>
+		</scroll-view>
+	</view>
+
+</view>

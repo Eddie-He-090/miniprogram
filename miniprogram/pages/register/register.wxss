@@ -1,0 +1,7 @@
+/* pages/register/register.wxss */
+
+.placeholder{margin:5px;padding:0 10px;text-align:center;background-color:var(--weui-BG-1);height:2.3em;line-height:2.3em;color:var(--weui-FG-1)}
+
+.button-sp-area{padding-top:15px;text-align:center}.weui-btn_mini{margin-right:4px}
+
+.weui-cells{background-color:var(--weui-BG-1)}

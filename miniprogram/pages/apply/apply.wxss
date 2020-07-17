@@ -1,0 +1,7 @@
+/* pages/apply/apply.wxss */
+
+.weui-toptips{display:block}
+
+.page{height:100%;background-color:var(--weui-BG-2)}
+
+.weui-label{width:4.1em}

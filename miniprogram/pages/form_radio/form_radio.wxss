@@ -1,0 +1,10 @@
+/* miniprogram/pages/form_radio/form_radio.wxss */
+.page{height:100%;background-color:var(--weui-BG-2)}
+
+.weui-form{background-color:var(--weui-BG-0)}
+
+.weui-cells{background-color:var(--weui-BG-1)}
+
+.page__desc{margin-top:5px;color:var(--weui-FG-1);text-align:center;font-size:14px}
+
+.weui-toptips{display:block}

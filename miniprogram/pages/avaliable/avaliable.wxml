@@ -1,0 +1,57 @@
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="page__hd">
+		<view class="page__title">{{ClassInChinese}}可接送学生列表</view>
+		<view class="page__desc">点击学生列表即可跳转到确认界面</view>
+	</view>
+
+	<view class="page__bd">
+		<view class="weui-cells__title">学号、姓名和接送地点</view>
+		<view class="weui-cells weui-cells_after-title fadeIn">
+			<view wx:for="{{StudentsPick}}" wx:key="index" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="open2" data-item="{{item}}">
+				<view class="weui-cell__bd"><text decode="true">&nbsp;&nbsp;{{item.ID}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.Name}}</text></view>
+				<view class="weui-cell__ft weui-cell__ft_in-access">{{item.Pick_Location}}</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="fadeIn {{hideDialog2 ? 'fadeOut' : ''}}" wx:if="{{dialog2}}">
+		<view class="weui-mask" bindtap="closeDialog2"></view>
+		<view class="weui-half-screen-dialog">
+			<view class="weui-half-screen-dialog__hd">
+				<view class="weui-half-screen-dialog__hd__side" bindtap="closeDialog2">
+					<!-- <a class="weui-icon-btn">返回<i class="weui-icon-back-arrow-thin"></i></a> -->
+				</view>
+				<view class="weui-half-screen-dialog__hd__main">
+					<strong class="weui-half-screen-dialog__title">确认接送</strong>
+					<!-- <view class="weui-half-screen-dialog__subtitle">标题</view> -->
+				</view>
+				<view class="weui-half-screen-dialog__hd__side">
+					<!-- <a class="weui-icon-btn">更多<i class="weui-icon-more"></i></a> -->
+				</view>
+			</view>
+			<view class="weui-half-screen-dialog__bd">
+				<view class="weui-half-screen-dialog__desc" style="text-align:center">
+					<text>学生学号：{{ID}} \n 学生姓名：{{Name}}</text>
+				</view>
+				<view class="weui-half-screen-dialog__tips" style="text-align:center">
+					接送地点：{{Pick_Location}}
+				</view>
+			</view>
+			<view class="weui-half-screen-dialog__ft">
+				<a class="weui-btn weui-btn_default" bindtap="closeDialog2">返回</a>
+				<a class="weui-btn weui-btn_primary" bindtap="confirmPicked">确认</a>
+			</view>
+		</view>
+	</view>
+
+	<view class="fadeIn {{hideToast ? 'fadeOut' : ''}}" wx:if="{{toast}}">
+		<view class="weui-mask_transparent"></view>
+		<view class="weui-toast">
+			<i class="weui-icon-success-no-circle weui-icon_toast"></i>
+			<view class="weui-toast__content">已完成</view>
+		</view>
+	</view>
+
+	<view wx:if="{{topTips}}" class="weui-toptips weui-toptips_warn fadeIn {{hide ? 'fadeOut' : ''}}">当前身份无权限</view>
+
+</view>
