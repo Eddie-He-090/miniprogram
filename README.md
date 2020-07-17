@@ -8,4 +8,4 @@ UI设计使用微信官方WEUI库。[项目地址](https://github.com/wechat-min
 
 - 《学生接送信息管理系统（小程序版）》产品设计文档.docx
 
-![微信小程序二维码](https://github.com/Eddie-He-090/miniprogram/blob/master/miniprogram%20QR%20code.jpg =1280x1280 "miniprogram QR code")
+![微信小程序二维码](https://github.com/Eddie-He-090/miniprogram/blob/master/miniprogram%20QR%20code.jpg =1280 "miniprogram QR code")
